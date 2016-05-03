@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="@drawable/bg_null">
+    <ListView
+        android:id="@+id/listViewChat"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:transcriptMode="alwaysScroll"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/linearLayout13"
+        android:layout_above="@+id/relativeLayout5" />
+
+    <LinearLayout
+        android:id="@+id/listFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout13"
+        android:gravity="center_vertical"
+        android:background="@drawable/chat1"
+        android:weightSum="1">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:src="@drawable/chatfriend" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trần Trung Hiếu"
+            android:id="@+id/txtNameListChat"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#ffffffff" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.10" />
+
+            <ImageButton
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/bntWCListChat"
+                android:layout_weight="0.10"
+                android:src="@drawable/wc" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/message"
+        android:layout_alignBottom="@+id/listFooter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout5">
+
+        <ImageButton
+            android:background="@null"
+            android:id="@+id/bntSend"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/send"
+            android:layout_alignBottom="@+id/txtMess"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/bntSend"
+            android:layout_toStartOf="@+id/bntSend"
+            android:background="@drawable/mesage">
+
+            <EditText
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMess"
+                android:inputType="textShortMessage"
+                android:lines="1"
+                android:background="#ffffffff"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/it">
+
+        <ImageView
+            android:background="@null"
+            android:id="@+id/postThumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/post_add" />
+
+        <TextView
+            android:id="@+id/txtDiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/postThumb"
+            android:maxLines="2"
+            android:textIsSelectable="false"
+            android:textSize="15dp"
+            android:ellipsize="end"
+            android:text="hiiii"
+            android:layout_below="@+id/txtDiaryFrom" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtDiaryFrom"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/postThumb"
+            android:layout_toEndOf="@+id/postThumb"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtDiaryDate"
+            android:layout_below="@+id/txtDiary"
+            android:layout_toRightOf="@+id/postThumb"
+            android:layout_toEndOf="@+id/postThumb"
+            android:textSize="10dp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

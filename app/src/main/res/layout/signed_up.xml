@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignRight="@+id/bntSign"
+        android:layout_alignEnd="@+id/bntSign">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Name:"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            android:id="@+id/signName"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Password:"
+            android:id="@+id/textView4"
+            android:layout_weight="1"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/signPass"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout3"
+        android:layout_above="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Retype Password:"
+            android:id="@+id/textView5"
+            android:layout_weight="1"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/signPas"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout4"
+        android:layout_above="@+id/bntSign"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Email:"
+            android:id="@+id/textView6"
+            android:layout_weight="1"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/signEmail"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGNED UP"
+        android:id="@+id/bntSign"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="95dp" />
+
+    <ImageView
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/ows1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

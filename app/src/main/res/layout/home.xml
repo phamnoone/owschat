@@ -1,0 +1,104 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/relativeLayout"
+                android:layout_alignParentEnd="false"
+                android:background="@drawable/bghome">
+
+                <ImageView
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/my"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="false"
+                    android:focusableInTouchMode="false"
+                    style="@style/Widget.AppCompat.Light.PopupMenu.Overflow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/home_my_name"
+                    android:layout_below="@+id/imageView4"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffffff"
+                    android:textStyle="bold"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:background="@null"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/bntCamera"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:layout_alignTop="@+id/home_my_name" />
+
+                <ImageButton
+                    android:background="@null"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/bntCamera2"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:layout_alignTop="@+id/imageView4"
+                    android:layout_alignRight="@+id/imageView4"
+                    android:layout_alignEnd="@+id/imageView4" />
+            </RelativeLayout>
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/listUsersHome"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg"
+                android:layout_below="@+id/relativeLayout2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:id="@+id/relativeLayout2"
+                android:background="@drawable/all_friends"></RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+    <fragment android:id="@+id/navigation_drawer"
+        android:layout_width="240dp" android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:name="com.example.user.task12.home.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
