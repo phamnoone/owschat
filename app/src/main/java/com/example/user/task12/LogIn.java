@@ -31,7 +31,7 @@ import java.util.List;
 
 public class LogIn extends ActionBarActivity {
 
-    private static final String FIREBASE_URL = "https://ows-chat.firebaseio.com";
+    private static final String FIREBASE_URL = "https://zolla.firebaseio.com";
     private Firebase mFirebaseRef;
     private String name;
     private String pass;
